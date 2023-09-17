@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./Style.CSS">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+</head>
+
+
+<nav>
+    <a href="#Notes" class="nav__link nav__link--active">Notes</a>
+    <a href="#class" class="nav__link nav__link--active">Class</a>
+   <a href="#box" class="nav__link nav__link--active">Box</a>
+    <a href="#Properties" class="nav__link nav__link--active">Complex Properties</a>
+<a href="#Media" class="nav__link nav__link--active">Media Queries</a>
+<a href="#Psuedo" class="nav__link nav__link--active">Psuedo Selectors</a>
+<a href="#Layout" class="nav__link nav__link--active">CSS Layout</a>
+</nav><body>
+<div class="anything"><h1 >My name is Yahya this is my notes on CSS </h1></div>
+<section id="Notes">
+    
+  <h2>Notes</h2>
+    <p> in line CSS you type style="color:" and type the color to change it</p>
+    <p>internal CSS you use the style tag, Write which part you are targetting using {} and then choose the style. no "" is needed and you write ; after so you can add more stuff like font size.</p>
+    <p>External CSS, open up .css file and then you just type while color and size you want same way using {}. doesnt work without semi colon at end.</p>
+<p>to link to external file you do link rel(this says the relationship to the file ie stylesheet) and then href find file location.</p>
+<p>keep html and css seperate its much cleaner and easier</p>
+<p> color: rgb you can choose from a lot of colours. 3 ways to color, words, rgb, Hex></p>
+<p> width and height tags choose it for section, hard coding if you choose pixels, choose percentage so it moves with the inspect.avoid using height.</p>
+<p>use height for vh (viewport height)</p>
+<p>border 1 px solid to make a small border</p>
+<p>font weight to make it bold and stuff and font family to choose font. insert font style from google. add, (different font) as a fallback font.</p>
+<p>specifity is prioritisation of styling. code that comes after is higher priority. class has higher weighting than generic weightings. you can only have one id but this has highest weighting</p>
+
+
+
+</section>
+
+
+<Section id="class">
+    <h2>Class</h2>
+    
+<p class="green">This is used to target certain paragraphs to be styled in certain ways. you type the class and then in CSS you write .(class name) and choose the style like that.</p>
+<p id="id"> this is the id tag just to remember how to use it. id is stronger than element and class combo. writing ! important overrides everything</p>
+<p id="red" class="blue">this is just to test how id is more important than class</p>
+<img src="./CSS test.JPG" alt="">
+</Section>
+
+
+
+<section id="box">
+<h2>Box</h2>
+<p>this section focuses on box model. every element in html basically a box</p>
+<p>padding works in clockwise for each value there is one side of the box.ie 15 15 15 15</p>
+<p>if you make boxsize into a border box itll make the width and height = to the border. so everything including border is max width and height. basically makes it smaller.</p>
+<div class="boxmodel">
+
+
+</div>
+<div class="boxmodel">
+
+</div>
+<p>browser auto collapses vertical margin in between 2 boxes. should be total of 20x in this example but its only 10 cos it collapses</p>
+<p>padding increases spacing in box.</p>
+</section>
+
+
+<section id="Properties">
+<h2>Complex Properties</h2>
+<p>2 display values in CSS. Block and inline. Block takes 100% of width and starts on a new line. p div tags.</p>
+<p>inline doesnt allow you to set a width or height and starts on same line. span image tags.</p>
+<p>Hello, this is just to show the difference between span and p tag</p>
+<span>This is going to be</span>
+<span>written on the same line despite being 2 different span tags.</span>
+<p>By default everythingh has a static position on the page, follows normal flow.</p>
+<p>relative lets you position using top left bottom right</p>
+<p>below is an example. in code you type position:relative</p>
+<div class="relative"><div class="absolute"></div>
+</div>
+<p>as you can see the box is not following the normal flow. It is in fact moving 10px from the bottom (10px up) and 10 px from the left (10px to the right)</p>
+<p>absolute is relative to the nearest relative positioned thing. eg absolute top:0 right:0 would have the box in the top right of the relative box.</p>
+<p>You can have position fixed which fixes something onto your screen at all times no matter where you scroll. i.e navigation bar or contact button.  </p>
+<p>you can have things sticky positioned which is similar to fixed but only happens after it hits a threshold.</p>
+<p>Position:fixed or sticky. if sticky add top "however many pixels"</p>
+</section>
+
+<section id="Media">
+<h2>Media Queries</h2>
+<p>Media Queries are used to make webpages responsive.</p>
+
+<img src="./Media Queries.JPG" alt="">
+<p>Basically you want your website to be suitable for all devices. so you would decrease the font pixels of everything, depending on the device.</p>
+<p>You do this by writing the code @media and then you type the max width of the device in pixels.</p>
+<p>After this youll write the code for which font size youd want to change in the scenario of this I wrote it for p. when pixels are 576 or less font changes to 16px.</p>
+
+
+
+</section>
+
+
+<section id="Psuedo">
+<h2>Psuedo Selectors</h2>
+<p>There are 2 types of psuedo elements. before and after.</p>
+<p class="Psuedo">This is an example of an after</p>
+<p class="before">can also be done before</p>
+<p>how you do this is you type which element you want to add a psuedo selector to and you do ::before/after then in brackets add content: "the message you want added". Can be used to track progress on websites</p>
+<p>You can also have hover effects, transition effects</p>
+<p class="hover">This is just to show you if you have a hover effect you can make it highlight stuff.</p>
+<p>You can use it for contrasts an example would be below. the theory is that you write "class":hover{background color:"")</p>
+<button class="Contrast">Contrast</button>
+<p>You can also have float animations and other transformations.</p>
+<p>you do this  by first writing animation: float(can be any animation) "how long you want it to be" "how many times you want it to play"  </p>
+<p>Then you write @keyframes (animation style in this case it was float) "what you want it to transform to at 0% and 100%</p>
+<p>Block element Modifier</p>
+
+</section>
+
+<section id="Layout">
+<h2>CSS Layout</h2>
+<p>Display block puts everything in a line</p>
+<p>display:flex unlocks 3 features, align items flex direction and justify content.</p>
+<p>flex direction is by default row but you can change it to column. align items stretches thing.</p>
+<p>justify content aligns it horizontally. 3 types of justify, start centre and end.</p>
+<p>justify content space around and space between adds space</p>
+<p>combine  justify and align a lot.</p>
+<p>if flex direction is column then justify content now aligns it vertically and align items does it horizontally</p>
+<img src="./CSS Layout.JPG" alt="">
+
+<div class="container">
+<div class="box"></div>
+<div class="box"></div>
+<div class="box"></div>
+</div>
+<p>you can also do flex-wrap which can choose if things fit on 1 line or multiple lines.</p>
+<p>flex flow combines direction and wrap. e.g. flex-flow: row wrap. puts everything in rows in multiple rows.</p>
+<p>align-content determines</p>
+<p>test
+
+</p>
+</section>
+
+</body>
+</html>
